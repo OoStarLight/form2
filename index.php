@@ -37,10 +37,10 @@
         <br>
             <label>
                 Interest
-                <label><input type="checkbox" name="photography" value="Photography"> Photography</label>
-                <label><input type="checkbox" name="trekking" value="Trekking"> Trekking</label>
-                <label><input type="checkbox" name="star gazing" value="Star Gazing"> Star Gazing</label>
-                <label><input type="checkbox" name="bird watching" value="Bird Watching"> Bird Watching</label>
+                <label><input type="checkbox" name="interests[]" value="Photography"> Photography</label>
+                <label><input type="checkbox" name="interests[]" value="Trekking"> Trekking</label>
+                <label><input type="checkbox" name="interests[]" value="Star Gazing"> Star Gazing</label>
+                <label><input type="checkbox" name="interests[]" value="Bird Watching"> Bird Watching</label>
 
             </label>
         <br>

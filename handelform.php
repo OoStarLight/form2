@@ -46,4 +46,55 @@
     $error[] = 'this region is not available';
    }
 
-  
+// 4. Season - must be in the list.
+
+   if(!empty($_POST['season'])){
+    $season = $_POST['season'];
+    $allowed_seasons = ['Summer', 'Winter', 'Spring', 'Autumn'];
+
+    if(!in_array($season, $allowed_seasons)){
+        $error[] = 'This season is not Allowed';
+    }
+
+   }else{
+    $error[] = 'this season is not available';
+   }
+
+// 5. Interest - 
+
+    if(!empty($_POST['interests'])){
+        $interests = $_POST['interests'];
+        $allowed_interests = ['Photography', 'Trekking', 'Star Gazing', 'Bird Watching'];
+
+        foreach($interest as $interest){
+            if(!in_array($interests, $allowed_interests)){
+                $error[] = 'This interest is not Allowed';
+            }
+            break;
+        }
+        
+
+    }
+
+// 6. Participant - required, participant must be between 1-10.
+
+
+        if(!empty($_POST['participant'])){
+            $participant = (int)$_POST['participant'];
+            if($participant < 1 && $participant > 10){
+                $error[] = 'The number of participant must be between 1 and 10';
+            }
+
+        }else{
+            $error[] = 'Enter the number of participants';
+        }
+
+// 7. Message - required, must not contain htmltags or js script.
+
+        if(!empty($_POST['message'])){
+            $message = htmlentities($_POST['message'], ENT_QUOTES, "UTF-8");
+
+
+        }else{
+            $error[] = 'You can tell us all you need so we can make your trip better';
+        }
