@@ -13,10 +13,10 @@
         <h1>ABC Voyage</h1>
         <form method="post" action="handelform.php">
             <label>Name <input type="text" name="name" placeholder="Name ..." required></label><br>
-            <label>Email <input type="email" name="name" placeholder="Name ..." required></label>
+            <label>Email <input type="email" name="email" placeholder="Name ..." required></label>
         <br>
             <label>Destination
-                 <select required name="destination">
+                 <select  name="destination">
                      <option>-- Select an Option --</option>
                     <option value="Africa">Africa</option>
                     <option value="Europa">Europa</option>
@@ -29,10 +29,10 @@
         <br>
             <label>Seasons 
 
-                <label><input type="radio" name="season" value="summer"> Summer</label>
-                <label><input type="radio" name="season" value="winter"> Winter</label>
-                <label><input type="radio" name="season" value="spring"> Spring</label>
-                <label><input type="radio" name="season" value="autumn"> Autumn</label>
+                <label><input type="radio" name="seasons" value="summer"> Summer</label>
+                <label><input type="radio" name="seasons" value="winter"> Winter</label>
+                <label><input type="radio" name="seasons" value="spring"> Spring</label>
+                <label><input type="radio" name="seasons" value="autumn"> Autumn</label>
             </label>
         <br>
             <label>
@@ -46,12 +46,12 @@
         <br>
             <label>
             Participant(s)
-                 <input type="number" name="participant" required>
+                 <input type="number" name="participants" required>
             </label>
         <br>
             <label>
                 Requirements
-                <textarea name="message" require></textarea>
+                <textarea name="requirement" require></textarea>
             </label>
             <input type="hidden" name="token" value="">
             <button type="submit">SEND</button>
