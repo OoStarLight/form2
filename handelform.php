@@ -85,22 +85,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    }
 
 // 5. Interest - 
-    
-    /*if(!empty($_POST['interests'])){
-
-        $interests = $_POST['interests'];
-        
-        $allowed_interests = ["Photography", "Trekking", "Star Gazing", "Bird Watching"];
-
-        foreach($interests as $interest){
-            if(!in_array($interest, $allowed_interests)){
-                $error[] = 'This interest is not Allowed';
-                break;
-            }
-        }
-        
-
-    } */
 
     if(isset($_POST['interests']) && is_array($_POST['interests'])) {
         $interests = $_POST['interests'];
@@ -113,12 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
         }
     
-        if(!empty($error)) {
-            // Display errors
-            foreach($error as $requirement) {
-                echo '<div>' . $requirement . '</div>';
-            }
-        }
+       
     }
     
 
